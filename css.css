@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wgh@300;400;500;600;700&display=swap');
+html{
+  scroll-behavior: smooth;
+
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: black;
+    
+}
+
+::selection{
+    background: #02c8f0;
+    color: white;
+}
+
+img{
+    pointer-events: none;
+}
+
+.landingPage{
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landingPage .topSide{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.landingPage .topSide .logo a img{
+    width: 150px;
+}
+
+.landingPage .topSide .logo a p.nombreweb{
+    font-size: 21px;
+    color: #02c8f0;
+}
+
+.landingPage .topSide .nombredisenador p{
+    font-size: 32px;
+    color: #02c8f0;
+    text-align: right;
+}
+
+.landingPage .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+}
+
+.landingPage .navbar a{
+    transition: all 0.2s ease-in-out;
+}
+
+.landingPage .navbar a.link:hover{
+    color: #02c8f0;
+    text-decoration: underline;
+}
+
+.landingPage .mainimage{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    max-width: 50%;
+}
+
+.landingPage .mainimage img{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.landingPage .fondo1 {
+    position: absolute;
+    padding: 100px;
+    bottom: 300px;
+    right: 450px;
+    z-index: 0;
+    transition: opacity 0.3s;
+}
+.landingPage .fondo3{
+    z-index: -3;
+}
+
+.landingPage .fondo3 img {
+    width: 100vw;
+    /* o */
+    height: 90vh;
+   opacity: 0.3;
+}
+
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #02c8f0;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+  }
+  
+  .cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #02c8f0;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
+  }
+  
+  .cursor:hover, a:hover{
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  
+ .cursor2:hover{
+    opacity: 0;
+  }
+
+.landingPage .fondo2 {
+    position: absolute;
+    padding: 100px;
+    bottom: 300px;
+    right: 450px;
+    z-index: -1;
+}
+
+.landingPage .fondo1:hover {
+    opacity: 0;
+    z-index: 0;
+}
+
+
+
+.landingPage .bottomLeftSide{
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+}
+
+.landingPage .bottomLeftSide p.job{
+    font-size: 32px;
+    color: #02c8f0;
+}
+
+.landingPage .bottomLeftSide p.location{
+    font-size: 21px;
+    color: #ccc;
+}
+
+.landingPage .bottomLeftSide p.location span{
+    color: #02c8f0;
+}
+
+.landingPage .about {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    max-width: 800px;
+    height: auto;
+    padding: 2rem;
+    z-index: 2;
+    overflow: hidden;
+    opacity: 0; /* Ocultamos el elemento por defecto */
+    transition: opacity 0.5s ease-in-out;
+    }
+    
+    .landingPage .about.show-about {
+        opacity: 1;
+      }
+      
+  
+.navbar .link-a:hover{
+    color: #02c8f0;
+}  
+
+.landingPage .bottomRightSide{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.landingPage .bottomRightSide a i{
+    font-size: 21px;
+    transition: all 0.2s ease-in-out;
+}
+
+.landingPage .bottomRightSide a i:hover{
+    color: #02c8f0;
+    
+}
+
+.contacto {
+  background-color: #000000;
+  padding: 80px 0;
+}
+
+.contact-heading {
+  text-align: center;
+  padding-top: 10vh;
+  margin-top: 0;
+  margin-bottom: 10vh;
+}
+
+.contact-heading h2 {
+  font-size: 36px;
+  margin-top: -12vh;
+  color: #02c8f0;
+  font-weight: 700;
+}
+
+.divisor {
+  width: 100px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.contenedor-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contacto-datos h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+
+@media screen and (max-width: 1920px) {
+    .landingPage .mainimage {
+      max-width: 60%;
+    }
+    .landingPage .fondo1,
+    .landingPage .fondo2 {
+      position: absolute;
+      bottom: 22.9166666667vh; /* 440px en relación al 1920px */
+      right: 26.0416666667vh; /* 500px en relación al 1920px */
+      padding: 3.125vh; /* 50px en relación al 1920px */
+    }
+    .landingPage .topSide .logo a img {
+      width: 13.8888888889vh; /* 100px en relación al 768px */
+    }
+    .landingPage .topSide .logo a p.nombreweb {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .topSide .nombredisenador p {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.job {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.location {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .bottomRightSide a i {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .landingPage .mainimage {
+      max-width: 80%;
+    }
+    .landingPage .fondo1,
+    .landingPage .fondo2 {
+      position: absolute;
+      bottom: 11.4583333333vh; /* 175px en relación al 1440px */
+      right: 16.6666666667vh; /* 240px en relación al 1440px */
+      padding: 1.875vh; /* 30px en relación al 1440px */
+    }
+    .landingPage .topSide .logo a img {
+      width: 13.8888888889vh; /* 100px en relación al 768px */
+    }
+    .landingPage .topSide .logo a p.nombreweb {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .topSide .nombredisenador p {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.job {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.location {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .bottomRightSide a i {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .landingPage .mainimage {
+      max-width: 100%;
+    }
+    .landingPage .fondo1,
+    .landingPage .fondo2 {
+      display: none;
+    }
+    .landingPage .topSide .logo a img {
+      width: 13.8888888889vh; /* 100px en relación al 768px */
+    }
+    .landingPage .topSide .logo a p.nombreweb {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .topSide .nombredisenador p {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.job {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.location {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .bottomRightSide a i {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .landingPage .navbar {
+      display: none;
+    }
+    .landingPage .topSide .logo a img {
+      width: 13.8888888889vh; /* 100px en relación al 768px */
+    }
+    .landingPage .topSide .logo a p.nombreweb {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .topSide .nombredisenador p {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.job {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.location {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .bottomRightSide a i {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .landingPage .topSide .logo a img {
+      width: 11.1111111111vh; /* 80px en relación al 480px */
+    }
+    .landingPage .topSide .logo a p.nombreweb {
+      font-size: 2.2222222222vh; /* 16px en relación al 480px */
+    }
+    .landingPage .topSide .nombredisenador p {
+      font-size: 2.7777777778vh; /* 20px en relación al 480px */
+    }
+    .landingPage .bottomLeftSide p.job {
+      font-size: 2.7777777778vh; /* 20px en relación al 480px */
+    }
+    .landingPage .bottomLeftSide p.location {
+      font-size: 2.2222222222vh; /* 16px en relación al 480px */
+    }
+    .landingPage .bottomRightSide a i {
+      font-size: 2.2222222222vh; /* 16px en relación al 480px */
+    }
+    .landingPage .fondo1,
+    .landingPage .fondo2 {
+      position: absolute;
+      top: 5vh; /* ajusta la posición vertical */
+      left: 5vh; /* ajusta la posición horizontal */
+      padding: 1.25vh; /* 20px en relación al 480px */
+    }
+  }
+  

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola!</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <script src="https://kit.fontawesome.com/96ee3b227d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="landingPage">
+        <div class="topSide">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="alex.png" alt="weblogo">
+                    <p class="nombreweb">AGJ</p>
+                </a>
+            </div>
+            <div class="nombredisenador">
+                <p>ALEX GÁMEZ</p>
+            </div>
+        </div>
+        <nav class="navbar">
+            <a href="#" class="link" id="linkabout">ABOUT</a>
+            <a href="#" class="link">PROJECTS</a>
+            <a href="#contacto" class="link" id="linkcontact">CONTACT</a>
+        </nav>
+
+        <div class="mainimage" id="scene">
+            <img src="fondo2.png" alt="" data-depth="0.2">
+        </div>
+       
+        <div class="fondo1">
+            <img src="monitorsinanimacion.png">
+          </div>
+        <div class="fondo2">
+            <img src="monitoranimado.gif">
+        </div>
+        <div class="fondo3">
+            <img src="back.gif" alt="">
+           
+        </div>
+        <div class="bottomLeftSide">
+            <p class="job">Full Stack Dev.</p>
+            <p class="location">From <span>MÁLAGA</span></p>
+        </div>
+        <div class="about">
+            ¡Hola!, un desarrollador fullstack con una pasión desbordante por el mundo digital. <br><br>
+            Me encanta construir soluciones creativas que sorprendan tanto a los usuarios como a los curiosos.
+            Con experiencia en Java, SQL, JavaScript, HTML, CSS, Kotlin y Python, puedo moverme sin problemas entre el 
+            lado del servidor y el cliente para crear aplicaciones web sorprendentes. Pero eso no es todo, también
+            soy diseñador gráfico, agregando un toque estético a mis creaciones.<br><br>
+            Cuando no estoy sumergido en el código, me gusta explorar nuevas formas de inspiración a través del arte, 
+            la música y otras expresiones creativas. Siempre estoy buscando la chispa que encienda la innovación en mis proyectos.<br>
+            Entonces, si estás buscando un desarrollador fullstack con una pizca de arte, estás en el lugar correcto. <br><br>¡Vamos a hacer
+            que tus ideas cobren vida y juntos llevémoslas a un nivel completamente nuevo!
+        </div>
+        <div class="bottomRightSide">
+            <a href="https://twitter.com/alxx_gjfi"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/AGJimenez/"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/alxx.gj/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/alejandrogamezdev/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <div class="contacto" id="contacto">
+        <div class="contact-heading">
+            <div class="divisor"></div>
+            <h2>¡MANTEGAMOS EL CONTACTO!</h2>
+        </div>
+
+        <div class="contenedor-contacto">
+          
+            <div class="contacto-datos">
+                <h3>Alex Gámez</h3>
+                <h3>662 59 25 50</h3>
+                <h3>Estación de Cártama, Málaga</h3>
+                <h3>alexgamezjimenez@hotmail.com</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+  
+    <script> 
+    const linkAbout = document.getElementById('linkabout');
+    const aboutSection = document.querySelector('.landingPage .about');
+    const linkContact = document.getElementById('linkcontact');
+    const contactSection = document.querySelector('.contacto');
+
+    linkAbout.addEventListener('mouseover', () => {
+    aboutSection.classList.add('show-about');
+    });
+
+    linkAbout.addEventListener('mouseout', () => {
+    aboutSection.classList.remove('show-about');
+    }); 
+
+    linkContact.addEventListener('click', () => {
+    contactSection.classList.add('show-contact');
+    });
+
+    </script>
+
+    <script>
+      var cursor = document.querySelector(".cursor");
+      var cursor2 = document.querySelector(".cursor2");
+      document.addEventListener("mousemove",function(e){
+        cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+      });
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="path/to/parallax.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
