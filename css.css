@@ -271,146 +271,102 @@ img{
   color: #ffffff;
 }
 
+/* Estilos para móviles de 6 pulgadas o menos */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+  }
 
-@media screen and (max-width: 1920px) {
-    .landingPage .mainimage {
-      max-width: 60%;
-    }
-    .landingPage .fondo1,
-    .landingPage .fondo2 {
-      position: absolute;
-      bottom: 22.9166666667vh; /* 440px en relación al 1920px */
-      right: 26.0416666667vh; /* 500px en relación al 1920px */
-      padding: 3.125vh; /* 50px en relación al 1920px */
-    }
-    .landingPage .topSide .logo a img {
-      width: 13.8888888889vh; /* 100px en relación al 768px */
-    }
-    .landingPage .topSide .logo a p.nombreweb {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
-    .landingPage .topSide .nombredisenador p {
-      font-size: 3.3333333333vh; /* 24px en relación al 768px */
-    }
-    .landingPage .bottomLeftSide p.job {
-      font-size: 3.3333333333vh; /* 24px en relación al 768px */
-    }
-    .landingPage .bottomLeftSide p.location {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
-    .landingPage .bottomRightSide a i {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
+  .landingPage .topSide .logo a img {
+    width: 60px; /* Reduzca el tamaño del logo */
   }
-  
-  @media screen and (max-width: 1440px) {
-    .landingPage .mainimage {
-      max-width: 80%;
-    }
-    .landingPage .fondo1,
-    .landingPage .fondo2 {
-      position: absolute;
-      bottom: 11.4583333333vh; /* 175px en relación al 1440px */
-      right: 16.6666666667vh; /* 240px en relación al 1440px */
-      padding: 1.875vh; /* 30px en relación al 1440px */
-    }
-    .landingPage .topSide .logo a img {
-      width: 13.8888888889vh; /* 100px en relación al 768px */
-    }
-    .landingPage .topSide .logo a p.nombreweb {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
-    .landingPage .topSide .nombredisenador p {
-      font-size: 3.3333333333vh; /* 24px en relación al 768px */
-    }
-    .landingPage .bottomLeftSide p.job {
-      font-size: 3.3333333333vh; /* 24px en relación al 768px */
-    }
-    .landingPage .bottomLeftSide p.location {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
-    .landingPage .bottomRightSide a i {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
+
+  .landingPage .topSide .logo a p.nombreweb {
+    font-size: 14px; /* Reduzca el tamaño del texto del nombre del sitio */
   }
-  
-  @media screen and (max-width: 1024px) {
-    .landingPage .mainimage {
-      max-width: 100%;
-    }
-    .landingPage .fondo1,
-    .landingPage .fondo2 {
-      display: none;
-    }
-    .landingPage .topSide .logo a img {
-      width: 13.8888888889vh; /* 100px en relación al 768px */
-    }
-    .landingPage .topSide .logo a p.nombreweb {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
-    .landingPage .topSide .nombredisenador p {
-      font-size: 3.3333333333vh; /* 24px en relación al 768px */
-    }
-    .landingPage .bottomLeftSide p.job {
-      font-size: 3.3333333333vh; /* 24px en relación al 768px */
-    }
-    .landingPage .bottomLeftSide p.location {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
-    .landingPage .bottomRightSide a i {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
+
+  .landingPage .topSide .nombredisenador p {
+    font-size: 18px; /* Tamaño de fuente del nombre del diseñador */
   }
-  
-  @media screen and (max-width: 768px) {
-    .landingPage .navbar {
-      display: none;
-    }
-    .landingPage .topSide .logo a img {
-      width: 13.8888888889vh; /* 100px en relación al 768px */
-    }
-    .landingPage .topSide .logo a p.nombreweb {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
-    .landingPage .topSide .nombredisenador p {
-      font-size: 3.3333333333vh; /* 24px en relación al 768px */
-    }
-    .landingPage .bottomLeftSide p.job {
-      font-size: 3.3333333333vh; /* 24px en relación al 768px */
-    }
-    .landingPage .bottomLeftSide p.location {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
-    .landingPage .bottomRightSide a i {
-      font-size: 2.5vh; /* 18px en relación al 768px */
-    }
+
+  .landingPage .bottomLeftSide p.job,
+  .landingPage .bottomLeftSide p.location,
+  .landingPage .bottomRightSide a i {
+    font-size: 14px; /* Tamaño de fuente de otros elementos de texto */
   }
-  
-  @media screen and (max-width: 480px) {
-    .landingPage .topSide .logo a img {
-      width: 11.1111111111vh; /* 80px en relación al 480px */
-    }
-    .landingPage .topSide .logo a p.nombreweb {
-      font-size: 2.2222222222vh; /* 16px en relación al 480px */
-    }
-    .landingPage .topSide .nombredisenador p {
-      font-size: 2.7777777778vh; /* 20px en relación al 480px */
-    }
-    .landingPage .bottomLeftSide p.job {
-      font-size: 2.7777777778vh; /* 20px en relación al 480px */
-    }
-    .landingPage .bottomLeftSide p.location {
-      font-size: 2.2222222222vh; /* 16px en relación al 480px */
-    }
-    .landingPage .bottomRightSide a i {
-      font-size: 2.2222222222vh; /* 16px en relación al 480px */
-    }
-    .landingPage .fondo1,
-    .landingPage .fondo2 {
-      position: absolute;
-      top: 5vh; /* ajusta la posición vertical */
-      left: 5vh; /* ajusta la posición horizontal */
-      padding: 1.25vh; /* 20px en relación al 480px */
-    }
+
+  .landingPage .navbar {
+    display: none; /* Oculta la barra de navegación en pantallas pequeñas */
   }
-  
+
+  .landingPage .mainimage {
+    max-width: 100%; /* Hace que la imagen principal sea responsive */
+  }
+
+  .landingPage .fondo1,
+  .landingPage .fondo2,
+  .landingPage .fondo3 {
+    display: none; /* Oculta los fondos en pantallas pequeñas */
+  }
+
+  .landingPage .about {
+    width: 80%; /* Ancho del bloque de texto en pantallas pequeñas */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Estilos para móviles de 6 pulgadas a 10 pulgadas */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 16px; /* Tamaño de fuente para pantallas medianas */
+  }
+
+  .landingPage .topSide .logo a img {
+    width: 80px; /* Tamaño de logo para pantallas medianas */
+  }
+
+  .landingPage .topSide .logo a p.nombreweb {
+    font-size: 18px; /* Tamaño de fuente para el nombre del sitio en pantallas medianas */
+  }
+
+  .landingPage .topSide .nombredisenador p {
+    font-size: 24px; /* Tamaño de fuente para el nombre del diseñador en pantallas medianas */
+  }
+
+  .landingPage .bottomLeftSide p.job,
+  .landingPage .bottomLeftSide p.location,
+  .landingPage .bottomRightSide a i {
+    font-size: 18px; /* Tamaño de fuente para otros elementos en pantallas medianas */
+  }
+
+  .landingPage .navbar {
+    display: flex; /* Muestra la barra de navegación en pantallas medianas */
+  }
+
+  .landingPage .mainimage {
+    max-width: 60%; /* Tamaño máximo de imagen principal en pantallas medianas */
+  }
+
+  .landingPage .fondo1,
+  .landingPage .fondo2,
+  .landingPage .fondo3 {
+    display: block; /* Muestra los fondos en pantallas medianas */
+  }
+
+  .landingPage .about {
+    width: 30%; /* Ancho del bloque de texto en pantallas medianas */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Estilos para portátiles de 10 pulgadas a 15 pulgadas */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* Ajusta los estilos según sea necesario para pantallas de portátiles medianos */
+}
+
+/* Estilos para portátiles de 15 pulgadas o más grandes */
+@media screen and (min-width: 1441px) {
+  /* Ajusta los estilos según sea necesario para pantallas de portátiles más grandes */
+}
