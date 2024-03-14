@@ -63,6 +63,8 @@ img{
     text-align: right;
 }
 
+
+
 .landingPage .navbar{
     display: flex;
     align-items: center;
@@ -113,6 +115,22 @@ img{
     /* o */
     height: 90vh;
    opacity: 0.3;
+}
+
+.boton_descarga{
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  background-color: transparent;
+  border: 0.2rem solid #02c8f0;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.boton_descarga:hover{
+  transform: none;
+  color: white;
+  background-color: #02c8f0;
+
 }
 
 .cursor{
@@ -228,6 +246,26 @@ img{
     
 }
 
+.landingPage .bottomRightSideP {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.landingPage .bottomRightSideP a i {
+  font-size: 21px;
+  transition: all 0.2s ease-in-out;
+}
+
+.landingPage .bottomRightSideP a i:hover {
+  color: #02c8f0;
+}
+
+
 .contacto {
   background-color: #000000;
   padding: 80px 0;
@@ -271,102 +309,554 @@ img{
   color: #ffffff;
 }
 
-/* Estilos para móviles de 6 pulgadas o menos */
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-  }
+/*PRUEBA CSS*/
+.carousel{
+  height: 60vh;
+  margin-top: 3%;
+  width: 90vw;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #02c8f0;
+  z-index: 0;
+}
+.carousel .list .item{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+}
+.carousel .list .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel .list .item .content{
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.carousel .list .item .author{
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: #02c8f0;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+.carousel .list .item .topic{
+  color: #f1683a;
+}
+.carousel .list .item .buttons{
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+  border: none;
+  background-color:#02c8f0;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+  background-color: transparent;
+  border: 1px solid #02c8f0;
+  background-color:#ffffff;
+  color: #02c8f0;
+}
 
-  .landingPage .topSide .logo a img {
-    width: 60px; /* Reduzca el tamaño del logo */
-  }
+.carousel .list .item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000003b; /* Color oscuro semitransparente */
+  opacity: 0; /* Comienza invisible */
+  transition: opacity 0.3s; /* Efecto de transición suave */
+}
 
-  .landingPage .topSide .logo a p.nombreweb {
-    font-size: 14px; /* Reduzca el tamaño del texto del nombre del sitio */
-  }
+.carousel .list .item:hover::before {
+  opacity: 1; /* Hacer visible cuando el ratón está sobre la tarjeta */
+}
 
-  .landingPage .topSide .nombredisenador p {
-    font-size: 18px; /* Tamaño de fuente del nombre del diseñador */
-  }
+/* thumbail */
+.thumbnail{
+  position: absolute;
+  bottom: 10px;
+  left: 74%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+.thumbnail .item{
+  width: 130px;
+  height: 190px;
+  flex-shrink: 0;
+  position: relative;
+}
+.thumbnail .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.thumbnail .item .content{
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.thumbnail .item .content .title{
+  font-weight: 500;
+  text-shadow: 0 0px 5px rgb(0, 0, 0);
+}
+.thumbnail .item .content .description{
+  font-weight: 300;
+  color: #f1683a;
+}
+/* arrows */
+.arrows{
+  position: absolute;
+  top: 90%;
+  right: 35%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.arrows button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.527);
+  border: none;
+  color: #02c8f0;
+  font-family: monospace;
+  font-weight: bold;
+  transition: .5s;
+  border: 1px solid #02c8f0;
+}
+.arrows button:hover{
+  background-color: #02c8f0;
+  color: #ffffff;
+}
 
-  .landingPage .bottomLeftSide p.job,
-  .landingPage .bottomLeftSide p.location,
-  .landingPage .bottomRightSide a i {
-    font-size: 14px; /* Tamaño de fuente de otros elementos de texto */
-  }
+/* animation */
+.carousel .list .item:nth-child(1){
+  z-index: 1;
+}
 
-  .landingPage .navbar {
-    display: none; /* Oculta la barra de navegación en pantallas pequeñas */
-  }
+/* animation text in first item */
 
-  .landingPage .mainimage {
-    max-width: 100%; /* Hace que la imagen principal sea responsive */
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+  to{
+      transform: translateY(0px);
+      filter: blur(0px);
+      opacity: 1;
   }
-
-  .landingPage .fondo1,
-  .landingPage .fondo2,
-  .landingPage .fondo3 {
-    display: none; /* Oculta los fondos en pantallas pequeñas */
-  }
-
-  .landingPage .about {
-    width: 80%; /* Ancho del bloque de texto en pantallas pequeñas */
-    left: 50%;
-    transform: translateX(-50%);
+}
+.carousel .list .item:nth-child(1) .content .title{
+  animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+  animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+  animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+  animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+  to{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
   }
 }
 
-/* Estilos para móviles de 6 pulgadas a 10 pulgadas */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    font-size: 16px; /* Tamaño de fuente para pantallas medianas */
+.carousel.next .thumbnail .item:nth-last-child(1){
+  overflow: hidden;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+  z-index: 100;
+}
+@keyframes showThumbnail{
+  from{
+      width: 0;
+      opacity: 0;
   }
+}
+.carousel.next .thumbnail{
+  animation: effectNext .5s linear 1 forwards;
+}
 
-  .landingPage .topSide .logo a img {
-    width: 80px; /* Tamaño de logo para pantallas medianas */
-  }
-
-  .landingPage .topSide .logo a p.nombreweb {
-    font-size: 18px; /* Tamaño de fuente para el nombre del sitio en pantallas medianas */
-  }
-
-  .landingPage .topSide .nombredisenador p {
-    font-size: 24px; /* Tamaño de fuente para el nombre del diseñador en pantallas medianas */
-  }
-
-  .landingPage .bottomLeftSide p.job,
-  .landingPage .bottomLeftSide p.location,
-  .landingPage .bottomRightSide a i {
-    font-size: 18px; /* Tamaño de fuente para otros elementos en pantallas medianas */
-  }
-
-  .landingPage .navbar {
-    display: flex; /* Muestra la barra de navegación en pantallas medianas */
-  }
-
-  .landingPage .mainimage {
-    max-width: 60%; /* Tamaño máximo de imagen principal en pantallas medianas */
-  }
-
-  .landingPage .fondo1,
-  .landingPage .fondo2,
-  .landingPage .fondo3 {
-    display: block; /* Muestra los fondos en pantallas medianas */
-  }
-
-  .landingPage .about {
-    width: 30%; /* Ancho del bloque de texto en pantallas medianas */
-    left: 50%;
-    transform: translateX(-50%);
+@keyframes effectNext{
+  from{
+      transform: translateX(150px);
   }
 }
 
-/* Estilos para portátiles de 10 pulgadas a 15 pulgadas */
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* Ajusta los estilos según sea necesario para pantallas de portátiles medianos */
+/* running time */
+
+.carousel .time{
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background-color: #f1683a;
+  left: 0;
+  top: 0;
 }
 
-/* Estilos para portátiles de 15 pulgadas o más grandes */
-@media screen and (min-width: 1441px) {
-  /* Ajusta los estilos según sea necesario para pantallas de portátiles más grandes */
+.carousel.next .time,
+.carousel.prev .time{
+  animation: runningTime 3s linear 1 forwards;
 }
+@keyframes runningTime{
+  from{ width: 100%}
+  to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame{
+  to{
+      width: 150px;
+      height: 220px;
+      bottom: 50px;
+      left: 50%;
+      border-radius: 20px;
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+  pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+  animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+  to{
+      transform: translateY(-150px);
+      filter: blur(20px);
+      opacity: 0;
+  }
+}
+/*FIN PRUEBA*/
+
+
+@media screen and (max-width: 1920px) {
+    .landingPage .mainimage {
+      max-width: 60%;
+    }
+    .landingPage .fondo1,
+    .landingPage .fondo2 {
+      position: absolute;
+      bottom: 22.9166666667vh; /* 440px en relación al 1920px */
+      right: 26.0416666667vh; /* 500px en relación al 1920px */
+      padding: 3.125vh; /* 50px en relación al 1920px */
+    }
+    .landingPage .topSide .logo a img {
+      width: 13.8888888889vh; /* 100px en relación al 768px */
+    }
+    .landingPage .topSide .logo a p.nombreweb {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .topSide .nombredisenador p {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.job {
+      font-size: 3.3333333333vh; /* 24px en relación al 768px */
+    }
+    .landingPage .bottomLeftSide p.location {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+    .landingPage .bottomRightSide a i {
+      font-size: 2.5vh; /* 18px en relación al 768px */
+    }
+  }
+  
+ 
+  
+  @media screen and (max-width: 900px) {
+    .mainimage{
+      display: none;
+    }
+    .landingPage .fondo1,
+    .landingPage .fondo2 {
+     display: none;
+    }
+    .landingPage .about {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      width: 70%;
+      height: auto;
+      padding: 2rem;
+      z-index: 2;
+      overflow: hidden;
+      opacity: 1; /* Ocultamos el elemento por defecto */
+      font-size: 1.5rem;
+      }
+      .navbar{
+        z-index: 101;
+      }
+      .boton_descarga{
+        padding: 1.5rem;
+        font-size: 1.2rem;
+        border: 0.1rem solid #02c8f0;
+      }
+      .carousel{
+        height: 70vh;
+        margin-top: 5%;
+        width: 90vw;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #02c8f0;
+        z-index: 0;
+      }
+      .carousel .list .item .content{
+        position: absolute;
+        top: 5%;
+        width: 1140px;
+        max-width: 80%;
+        left: 43%;
+        transform: translateX(-50%);
+        padding-right: 35%;
+        box-sizing: border-box;
+        color: #fff;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.445);
+        font-size: 1.1rem;
+      }
+      .carousel .list .item .buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: 40px;
+        gap: 5px;
+        margin-top: 20px;
+      }
+      .thumbnail{
+        position: absolute;
+        bottom: 10px;
+        left: 68%;
+        width: max-content;
+        z-index: 100;
+        display: flex;
+        gap: 20px;
+      }
+      .thumbnail .item{
+        width: 100px;
+        height: 160px;
+        flex-shrink: 0;
+        position: relative;
+      }
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .mainimage{
+      display: none;
+    }
+    .landingPage .about {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      width: 70%;
+      height: auto;
+      padding: 2rem;
+      z-index: 2;
+      overflow: hidden;
+      opacity: 1; /* Ocultamos el elemento por defecto */
+      font-size: 1rem;
+      }
+      .boton_descarga{
+        padding: 1rem;
+        font-size: 1rem;
+        border: 0.1rem solid #02c8f0;
+      }
+      .carousel{
+        height: 70vh;
+        margin-top: 9%;
+        width: 90vw;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #02c8f0;
+        z-index: 0;
+      }
+    
+      .carousel .list .item .content{
+        position: absolute;
+        top: 5%;
+        width: 1140px;
+        max-width: 80%;
+        left: 43%;
+        transform: translateX(-50%);
+        padding-right: 35%;
+        box-sizing: border-box;
+        color: #fff;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.445);
+        font-size: 0.9rem;
+      }
+      .carousel .list .item .buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: 40px;
+        gap: 5px;
+        margin-top: 20px;
+      }
+      .thumbnail{
+        position: absolute;
+        bottom: 10px;
+        left: 68%;
+        width: max-content;
+        z-index: 100;
+        display: flex;
+        gap: 20px;
+      }
+      .thumbnail .item{
+        width: 100px;
+        height: 160px;
+        flex-shrink: 0;
+        position: relative;
+      }
+      .navbar{
+        z-index: 101;
+      }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .mainimage{
+      display: none;
+    }
+    .landingPage .about {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      width: 70%;
+      height: auto;
+      padding: 2rem;
+      z-index: 2;
+      overflow: hidden;
+      opacity: 1; /* Ocultamos el elemento por defecto */
+      font-size: 0.7rem;
+      }
+
+      .carousel{
+        height: 70vh;
+        margin-top: 9%;
+        width: 90vw;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #02c8f0;
+        z-index: 0;
+      }
+    
+      .carousel .list .item .content{
+        position: absolute;
+        top: 5%;
+        width: 1140px;
+        max-width: 80%;
+        left: 43%;
+        transform: translateX(-50%);
+        padding-right: 35%;
+        box-sizing: border-box;
+        color: #fff;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.445);
+        font-size: small;
+      }
+      .carousel .list .item .buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: 40px;
+        gap: 5px;
+        margin-top: 20px;
+      }
+      .thumbnail{
+        position: absolute;
+        bottom: 10px;
+        left: 68%;
+        width: max-content;
+        z-index: 100;
+        display: flex;
+        gap: 20px;
+      }
+      .thumbnail .item{
+        width: 100px;
+        height: 160px;
+        flex-shrink: 0;
+        position: relative;
+      }
+      .boton_descarga{
+        padding: 1rem;
+        font-size: 1rem;
+        border: 0.1rem solid #02c8f0;
+      }
+      .navbar{
+        z-index: 101;
+      }
+  }

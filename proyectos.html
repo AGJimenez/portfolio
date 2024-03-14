@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,181 @@
     <script src="https://kit.fontawesome.com/96ee3b227d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <section class="landingPage">
+
+        <div class="topSide">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="alex.png" alt="weblogo">
+                    <p class="nombreweb">AGJ</p>
+                </a>
+            </div>
+            <a download="Alejandro_GamezCV" class="boton_descarga" href="Alejandro Gámez.pdf">
+                Descargar CV
+            </a>
+        </div>
+     
+        <nav class="navbar">
+            <a href="index.html" class="link">HOME</a>
+            <a href="index.html#contacto" class="link" id="linkcontact">CONTACT</a>
+        </nav>
+
+
+        
+        <!-- PRUEBA DE IMAGNES-->
+
+        <div class="carousel">
+            <!-- list item -->
+            <div class="list">
+                <div class="item">
+                    <img src="pacman.png">
+                    <div class="content">
+                        <div class="author">FULLSTACK</div>
+                        <div class="title">PACMAN</div>
+                        <div class="topic">JAVA</div>
+                        <div class="des">
+                            <!-- lorem 50 -->
+                            En este caso, se realiza un proyecto en Java, tanto con parte de interfaz, como con una pequeña base de datos MySQL online, semáfaros e hilos. Se propone un Pacman en Java.
+                        </div>
+                        <div class="buttons">
+                            <button><a href="https://github.com/AGJimenez/Pacman">GITHUB</a></button>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="menuPpal.png">
+                    <div class="content">
+                        <div class="author">FULLSTACK</div>
+                        <div class="title">DENTILAX</div>
+                        <div class="topic">JAVA, MYSQL</div>
+                        <div class="des">
+                            Dentilax es un software para escritorio, creado en Java Swing, con una amplia base de datos en MySQL. Contiene funciones como odontograma, gestión de pacientes, gestión de doctores,
+                            gestión de material y una programación de citas.
+                        </div>
+                        <div class="buttons">
+                            <button><a href=" https://github.com/AGJimenez/DentilaxFinal">GITHUB</a></button>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="avanzando.png">
+                    <div class="content">
+                        <div class="author">FRONT-END</div>
+                        <div class="title">AVANZANDO</div>
+                        <div class="topic">HTML, CSS, JS</div>
+                        <div class="des">
+                            Se realiza una página web para un negocio local, una clínica multidisciplinar con numerosos profesionales. Contiene código PHP descargable al enviar el formulario, pues el hosting
+                            no lo permite usar.
+                        </div>
+                        <div class="buttons">
+                            <button><a href="https://avanzanco-lyp-campanillas.web.app/">WEB</a></button>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="juego.png">
+                    <div class="content">
+                        <div class="author">FULLSTACK</div>
+                        <div class="title">RPG PROJECT</div>
+                        <div class="topic">GODOT, C#, GDSCRIPT</div>
+                        <div class="des">
+                            Este es un proyecto base para realizar, a posteriori, uno más grande, creando así un videojuego RPG con mecánicas de escape room. No está disponible para su visualización.
+                        </div>
+                        <div class="buttons">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- list thumnail -->
+            <div class="thumbnail">
+                <div class="item">
+                    <img src="pacman.png">
+                    <div class="content">
+                        <div class="title">
+                            Pacman
+                        </div>
+                        <div class="description">
+                            Java
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="menuPpal.png">
+                    <div class="content">
+                        <div class="title">
+                            Dentilax
+                        </div>
+                        <div class="description">
+                            Java, MySQL
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="avanzando.png">
+                    <div class="content">
+                        <div class="title">
+                            Avanzando
+                        </div>
+                        <div class="description">
+                            HTML, CSS, JS
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="juego.png">
+                    <div class="content">
+                        <div class="title">
+                            RPG Project
+                        </div>
+                        <div class="description">
+                            Godot, C#, GDScript
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- next prev -->
+    
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- time running -->
+            <div class="time"></div>
+        </div>
     
 
-    
+        <!--FIN DE PRUEBA-->
+
+        <div class="bottomRightSideP">
+            <a href="https://twitter.com/alxx_gjfi"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/AGJimenez/"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/alxx.gj/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/alejandrogamezdev/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+    </section>
+
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script>
+      var cursor = document.querySelector(".cursor");
+      var cursor2 = document.querySelector(".cursor2");
+      document.addEventListener("mousemove",function(e){
+        cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+      });
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="path/to/parallax.js"></script>
+    <script src="app2.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
